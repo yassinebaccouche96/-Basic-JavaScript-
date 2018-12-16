@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Mon éditeur</title>
+        <link rel="stylesheet" href="css/stylejs.css" />
+    </head>
+	<body>
+        <input type="button" value="G" style="font-weight: bold;" onclick="commande('bold');" />
+        <input type="button" value="I" style="font-style: italic;" onclick="commande('italic');" />
+        <input type="button" value="S" style="text-decoration: underline;" onclick="commande('underline');" />
+        <input type="button" value="Lien" onclick="commande('createLink');" />
+        <input type="button" value="Image" onclick="commande('insertImage');" />
+        
+        <input type="button" value="gauche" style="font-weight: justifyleft;" onclick="commande('justifyleft');" />
+        <input type="button" value="droite" style="font-weight: justifyright;" onclick="commande('justifyright');" />
+        <input type="button" value="center" style="font-weight: justifycenter;" onclick="commande('justifycenter');" />
+        <input type="button" value="Justifié" style="font-weight: justifyfull;" onclick="commande('justifyfull');" />
+        <input type="button" value="Liste à puces" style="font-weight: insertunorderedlist;" onclick="commande('insertunorderedlist');" />
+        <input type="button" value="Liste numérotée" style="font-weight: insertorderedlist;" onclick="commande('insertorderedlist');" />
+      
+      
+      
+        <select onchange="commande('heading', this.value); this.selectedIndex = 0;">
+          <option value="">Taille</option>
+          <option value="h1">Taille 1</option>
+          <option value="h2">Taille 2</option>
+          <option value="h3">Taille 3</option>
+          <option value="h4">taille 4</option> 
+          <option value="h5">Taille 5</option>
+          <option value="h6">Taille 6</option>
+        </select>
+        <div id="editeur" contentEditable></div>
+        <input type="button" onclick="resultat();" value="Obtenir le HTML" />
+        <br />
+        <textarea id="resultat"></textarea>
+        
+        <script src="js/main.js"></script>
+
+</html>
